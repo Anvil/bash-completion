@@ -841,7 +841,7 @@ _parse_usage()
                     # Treat as bundled short options
                     for (( i=1; i < ${#option}; i++ )); do
                         char=${option:i:1}
-                        [[ $char != '[' ]] && printf '%s\n' -$char
+                        [[ $char != '[' ]] && printf '%s\n' "-$char"
                     done
                     ;;
                 *)
