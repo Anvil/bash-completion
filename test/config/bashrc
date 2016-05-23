@@ -1,5 +1,7 @@
 # bashrc file for DejaGnu testsuite
 
+set -o nounset
+
 	# Use emacs key bindings
 set -o emacs
 	# Use bash strict mode
