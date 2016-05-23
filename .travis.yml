@@ -158,6 +158,11 @@ before_install:
   # bash for bash 4.x, coreutils for greadlink
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; brew install bash coreutils deja-gnu; fi
 
+env:
+  - BASH_COMPLETION_TEST_ENABLE_FAILGLOB=0 BASH_COMPLETION_TEST_ENABLE_NOUNSET=0
+  - BASH_COMPLETION_TEST_ENABLE_FAILGLOB=1
+  - BASH_COMPLETION_TEST_ENABLE_NOUNSET=1
+
 script:
   - export bashcomp_bash=bash
   - autoreconf -i
